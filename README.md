@@ -1,19 +1,27 @@
 # Distributed-Systems
 This repository contains distributed systems topics.
 
-### Span-MDS (Minimum Dominating Set) Algoritması
+### Paralel Eleman Arama
 
-Span-MDS algoritması, bir grafın minimum kümesini bulmak için kullanılan bir paralel algoritmadır. Minimum küme, bir grafın tüm düğümlerini kontrol eden en küçük düğüm kümesidir.
+Bu Python kod örneği, verilen bir veri listesinde belirli bir hedef elemanın var olup olmadığını paralel olarak arayan basit bir MPI (Message Passing Interface) uygulamasını göstermektedir.
 
-Algoritma, `mpi4py` kütüphanesini kullanarak paralel olarak çalışır. İşlemi MPI (Message Passing Interface) ile dağıtarak, her işlemci kendi parçasında belirli bir aralığı kontrol eder ve sonuçları birleştirir.
+Kodun çalışma mantığı şu adımları izler:
 
-Algoritmanın ana adımları şu şekildedir:
+1. İlk olarak, `eleman_ara` fonksiyonu tanımlanır ve veri listesi ile hedef eleman parametre olarak alınır.
 
-1. MPI başlatılır ve işlemci sayısı ve sıralama bilgileri alınır.
-2. Veri listesi, işlemci sayısına göre eşit parçalara bölünür. Her işlemciye bir parça atanır.
-3. Her işlemci, kendi parçasındaki veri üzerinde hedef elemanı arar.
-4. Her işlemcinin sonucu toplanır ve birleştirilir.
-5. Sıralama 0 olan işlemci, birleştirilmiş sonuçları değerlendirir ve hedef elemanın bulunup bulunmadığını belirler.
-6. MPI sonlandırılır.
+2. MPI başlatılır ve her işlemciye sırasıyla `rank` ve `size` değerleri atanır. `rank`, her işlemcinin benzersiz bir kimliğini temsil ederken, `size` ise toplam işlemci sayısını ifade eder.
 
-Bu algoritma, paralel hesaplama gücünden faydalanarak graf üzerinde etkili bir çözüm sunar. İşlemci sayısının artmasıyla hesaplama süresi hızlanır ve büyük graf yapıları üzerinde verimli bir şekilde çalışır.
+3. Veri listesi, toplam işlemci sayısına göre eşit parçalara bölünür. Her işlemciye bir parça atanır. Son işlemciye ek parçalar atanırken, diğer işlemcilerin parça boyutu aynı olacak şekilde dikkate alınır.
+
+4. Her işlemci kendi parçasında hedef elemanı arar. Parça sınırları, `baslangic` ve `bitis` değişkenleri kullanılarak belirlenir.
+
+5. Her işlemcinin kendi parçasında döngü kullanarak hedef elemanı araması gerçekleştirilir. Eğer hedef eleman bulunursa, `True` değeri döndürülür.
+
+6. Sonuçlar, `comm.gather()` fonksiyonu kullanılarak birleştirilir. Toplama işlemi, 0 numaralı işlemci tarafından gerçekleştirilir.
+
+7. Sonuçların işlenmesi, 0 numaralı işlemci tarafından yapılır. `any()` fonksiyonu kullanılarak toplanan sonuçlardan herhangi biri `True` ise hedef elemanın bulunduğu belirtilir, aksi takdirde bulunamadığı ifade edilir.
+
+8. MPI sonlandırılır ve program sonlanır.
+
+Bu kod, paralel hesaplama yeteneklerini kullanarak veri üzerinde arama işlemini hızlandırmaktadır. Her işlemcinin kendi parçasında bağımsız olarak çalışması, veri listesinin parçalara bölünerek paralel olarak işlenmesini sağlar. Böylece, performans artışı elde edilir ve büyük veri kümesi üzerinde arama işlemi daha etkili bir şekilde gerçekleştirilir.
+
