@@ -34,8 +34,21 @@ $ pip install matplotlib
 $ pip install scikit-learn 
 
 $ pip install scipy
-
 ```
+#### run
+```
+$ python3.11 span-mds.py 
+```
+
+Spanning MDS (Minimum Spanning Tree Multidimensional Scaling), bir veri kümesini düşük boyutlu bir uzayda temsil etmek için kullanılan bir algoritmadır. Algoritma, veri noktaları arasındaki mesafeleri hesaplar, ardından bu mesafeleri kullanarak minimum ağacı bulur ve son olarak çok boyutlu ölçeklendirmeyi (MDS) uygular.
+
+## Algoritma Adımları
+
+1. Veri kümesinin noktalarının koordinatları belirlenir.
+2. Noktalar arasındaki mesafeler hesaplanır. Öklidyen mesafe, genellikle bu hesaplama için kullanılan bir metriktir.
+3. Minimum ağacın oluşturulması için veri noktaları arasındaki mesafeler kullanılır. Minimum ağaç, veri noktalarını birleştiren en kısa mesafeli kenarları içerir.
+4. MDS (Çok Boyutlu Ölçekleme) uygulanır. MDS, veri noktalarını düşük boyutlu bir uzaya projeksiyon yaparak, orijinal veri yapısını korur.
+5. Sonuç olarak, veri noktaları düşük boyutlu bir uzayda temsil edilir.
 
 
 
