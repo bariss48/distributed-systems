@@ -1,7 +1,7 @@
 # Distributed-Systems
 This repository contains distributed systems topics.
 
-### Paralel Eleman Arama (mpi-search.py)
+## Paralel Eleman Arama (mpi-search.py)
 
 Bu Python kod örneği, verilen bir veri listesinde belirli bir hedef elemanın var olup olmadığını paralel olarak arayan basit bir MPI (Message Passing Interface) uygulamasını göstermektedir.
 
@@ -25,9 +25,9 @@ Kodun çalışma mantığı şu adımları izler:
 
 Bu kod, paralel hesaplama yeteneklerini kullanarak veri üzerinde arama işlemini hızlandırmaktadır. Her işlemcinin kendi parçasında bağımsız olarak çalışması, veri listesinin parçalara bölünerek paralel olarak işlenmesini sağlar. Böylece, performans artışı elde edilir ve büyük veri kümesi üzerinde arama işlemi daha etkili bir şekilde gerçekleştirilir.
 
-### Span MDS (span-mds.py)
+## Span MDS (span-mds.py)
 
-#### install dependencies
+### install dependencies
 ```
 $ pip install matplotlib
 
@@ -35,14 +35,14 @@ $ pip install scikit-learn
 
 $ pip install scipy
 ```
-#### run
+### run
 ```
 $ python3.11 span-mds.py 
 ```
 
 Spanning MDS (Minimum Spanning Tree Multidimensional Scaling), bir veri kümesini düşük boyutlu bir uzayda temsil etmek için kullanılan bir algoritmadır. Algoritma, veri noktaları arasındaki mesafeleri hesaplar, ardından bu mesafeleri kullanarak minimum ağacı bulur ve son olarak çok boyutlu ölçeklendirmeyi (MDS) uygular.
 
-## Algoritma Adımları
+### Algoritma Adımları
 
 1. Veri kümesinin noktalarının koordinatları belirlenir.
 2. Noktalar arasındaki mesafeler hesaplanır. Öklidyen mesafe, genellikle bu hesaplama için kullanılan bir metriktir.
@@ -55,11 +55,11 @@ Spanning MDS (Minimum Spanning Tree Multidimensional Scaling), bir veri kümesin
 ![Figure_1](https://github.com/bariss48/distributed-systems/assets/50153950/02d7d4d0-85e7-4d50-9b75-21436c694bfe)
 
 
-# Terry-Token Algoritması (terry-token.py)
+## Terry-Token Algoritması (terry-token.py)
 
 Terry-Token Algoritması, iletişim ağlarındaki düğümler arasında eşit miktarda veri transferi sağlamak için kullanılan bir algoritmadır. Bu algoritma, dağıtılmış sistemlerde kullanılan token tabanlı bir protokoldür.
 
-## Algoritma Adımları
+### Algoritma Adımları
 
 1. İletişim ağındaki düğümler bir halka şeklinde düzenlenir. Her düğüm, veri paketlerini almak ve göndermek için bir token'e sahiptir.
 2. Algoritma başladığında, bir başlatma düğümü token'i alır ve veri transferini başlatır.
