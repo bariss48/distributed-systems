@@ -1,7 +1,7 @@
 # Distributed-Systems
 This repository contains distributed systems topics.
 
-### Paralel Eleman Arama
+### Paralel Eleman Arama (mpi-search.py)
 
 Bu Python kod örneği, verilen bir veri listesinde belirli bir hedef elemanın var olup olmadığını paralel olarak arayan basit bir MPI (Message Passing Interface) uygulamasını göstermektedir.
 
