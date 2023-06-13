@@ -1,7 +1,7 @@
-# distributed-systems
+# Distributed-Systems
 This repository contains distributed systems topics.
 
-## Span-MDS (Minimum Dominating Set) Algoritması
+### Span-MDS (Minimum Dominating Set) Algoritması
 
 Span-MDS algoritması, bir grafın minimum kümesini bulmak için kullanılan bir paralel algoritmadır. Minimum küme, bir grafın tüm düğümlerini kontrol eden en küçük düğüm kümesidir.
 
