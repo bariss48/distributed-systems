@@ -25,3 +25,13 @@ Kodun çalışma mantığı şu adımları izler:
 
 Bu kod, paralel hesaplama yeteneklerini kullanarak veri üzerinde arama işlemini hızlandırmaktadır. Her işlemcinin kendi parçasında bağımsız olarak çalışması, veri listesinin parçalara bölünerek paralel olarak işlenmesini sağlar. Böylece, performans artışı elde edilir ve büyük veri kümesi üzerinde arama işlemi daha etkili bir şekilde gerçekleştirilir.
 
+### Span MDS (span-mds.py)
+
+##### install dependicies.
+$ pip install matplotlib
+
+$ pip install scikit-learn 
+
+$ pip install scipy
+
+
