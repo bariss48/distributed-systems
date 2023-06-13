@@ -55,4 +55,26 @@ Spanning MDS (Minimum Spanning Tree Multidimensional Scaling), bir veri kümesin
 ![Figure_1](https://github.com/bariss48/distributed-systems/assets/50153950/02d7d4d0-85e7-4d50-9b75-21436c694bfe)
 
 
+# Terry-Token Algoritması (terry-token.py)
+
+Terry-Token Algoritması, iletişim ağlarındaki düğümler arasında eşit miktarda veri transferi sağlamak için kullanılan bir algoritmadır. Bu algoritma, dağıtılmış sistemlerde kullanılan token tabanlı bir protokoldür.
+
+## Algoritma Adımları
+
+1. İletişim ağındaki düğümler bir halka şeklinde düzenlenir. Her düğüm, veri paketlerini almak ve göndermek için bir token'e sahiptir.
+2. Algoritma başladığında, bir başlatma düğümü token'i alır ve veri transferini başlatır.
+3. Başlatma düğümü, token'i alarak bir veri paketini hedef düğüme gönderir.
+4. Hedef düğüm, veri paketini alır ve gerektiğinde işler. Daha sonra, veri paketini bir sonraki hedef düğüme yönlendirir.
+5. Token, son hedef düğüme ulaştığında, son düğüm veri paketini işledikten sonra token'i bir sonraki düğüme ileterek veri transferini sürdürür.
+6. Bu süreç, token halkasının tüm düğümlerini dolaşana kadar devam eder. Her düğüm, token'i alarak veri paketlerini işler ve bir sonraki düğüme ileterek döngüyü sürdürür.
+7. Token halkası tam bir döngü yaptığında, veri transferi tamamlanır.
+
+Terry-Token Algoritması, iletişim ağlarında veri transferinin düzenlenmesini sağlar ve eşit miktarda veri transferini her düğüm üzerinde gerçekleştirir.
+
+### Örnek çıktı
+![Ekran Resmi 2023-06-13 22 09 25](https://github.com/bariss48/distributed-systems/assets/50153950/cddc5930-23d9-4775-857f-db8c53d2e1ec)
+
+
+
+
 
