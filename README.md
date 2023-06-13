@@ -50,7 +50,9 @@ Spanning MDS (Minimum Spanning Tree Multidimensional Scaling), bir veri kümesin
 4. MDS (Çok Boyutlu Ölçekleme) uygulanır. MDS, veri noktalarını düşük boyutlu bir uzaya projeksiyon yaparak, orijinal veri yapısını korur.
 5. Sonuç olarak, veri noktaları düşük boyutlu bir uzayda temsil edilir.
 
+### Örnek çıktı
 
+![Figure_1](https://github.com/bariss48/distributed-systems/assets/50153950/02d7d4d0-85e7-4d50-9b75-21436c694bfe)
 
 
 
