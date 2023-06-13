@@ -27,11 +27,17 @@ Bu kod, paralel hesaplama yeteneklerini kullanarak veri üzerinde arama işlemin
 
 ### Span MDS (span-mds.py)
 
-##### install dependicies.
+#### install dependencies
+```
 $ pip install matplotlib
 
 $ pip install scikit-learn 
 
 $ pip install scipy
+
+```
+
+
+
 
 
